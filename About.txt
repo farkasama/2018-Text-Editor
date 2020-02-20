@@ -1,0 +1,14 @@
+Ce projet a été réalisé par
+- JOUANNE Etienne
+- RENAULT Paul
+- ZHUANG  Kailun
+
+On a le plus consacré du temps dans le buffer et DLinkedList;
+Beaucoup plus de difficulté rencontré par rapport à Java avec
+    - void*
+    - malloc
+    - free
+    - pointeur dans tous les sens
+
+On a au final finit l'implémentation de DLinkedList.
+Mais la difficulté nous a retarder le planification du projet.

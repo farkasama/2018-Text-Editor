@@ -1,0 +1,97 @@
+A faire le 16/05:
+    - menu de commande et de message
+    - Shortcut: C^s sauvegarde, C^o ouvrire un fichier
+    - editor_buffer: cur_up et cur_down
+
+/* ------ */
+A finir:
+- Refactor(integration) de windows.c/.h dans le projet
+
+    
+/* ------ */
+A faire:
+- Utilisation de <check.h> pour les tests
+- fonctionnalité [Selection]
+- Shortcut
+
+/* ------ */
+Amélioration:
+    - corriger fuites de mémoire dans DLinkedList et editor_buffer  
+    - déplacer la struct DlinkedList et editor_buffer dans le .c au lieu du .c
+
+/* ------ */
+Fait:
+- 18/05:
+    - editor_buffer: ajout de fonction de lecture de char*
+    - ajout des fonctionnalités Copy/Paste //respectivement C^x et C^v
+    - modification de la couleur de sélection
+    - editor_buffer: amélioration des fonctions du curseur
+
+- 17/05:
+    - ajout d'une méthode de sélection de texte
+    
+A faire le 16/05:
+    - menu de commande et de message
+    - Shortcut: C^s sauvegarde, C^o ouvrire un fichier
+    - editor_buffer: implémentation cur_up et cur_down
+- 16/05:
+    - editor_buffer: implémentation cur_up et cur_down
+    - correction ENFIN finie de fuite de mémoire
+
+A faire le 15/05:
+    - file_io.c/.h
+    - editor_buffer: test restes des fonctionnalités.
+- 15/05:
+    - editor_buffer: test restes des fonctionnalités.(rm_char, add_char, add_line)
+    - file_io.c/.h
+    - Ajout tableau de chars[256] contenant les chars ascii
+    
+
+Pour le 10/04:
+    - editor_buffer: test restes des fonctionnalités.
+- 10/04:
+    - editor_buffer: éliminer les erreurs de mémoires.
+
+Pour le 3 avril :
+    - editor_buffer: test des fonctionnalités. (cur_left cur_right)
+    - correction de makefile: 'gcc: warning: DLinkedList.o: linker input file unused because linking not done'
+- 03/04/2018:
+    - makefile corrigé: en fait -c ne fait pas de link, donc pas besoin de lui donner des dépendances
+    - DlinkedList: free chaque caractère pour éliminer les fuites de mémoire à chaque rm de caractère
+    - ajout de windows.c/.h
+
+- 26/03/2018:
+    - DLinkedList: correction bugs et ajout fonctionnalite, test réussit des fonctionnalités
+    - editor_buffer: ajout de fonction, et fonctions de base testés (réussit)
+    - Modification mineur makefile: Enlevement de clean, mais ça a crée un warning au make: 'gcc: warning: DLinkedList.o: linker input file unused because linking not done'
+
+- 20/03/2018:
+    - quelque fonction de base dans editor_buffer
+
+- 20/03/2018:
+    - en fait on peut faire DLinkedList.h/.c réutilisable.(module générique avec void*)
+      - puis faire un buffer qui l'utilise. Et positionne son pointeur. 
+        Parce que DlinkedList pointe VERS un char, alors qu'un éditeur position ENTRE deux chars
+
+- 11/03/2018: 
+    - ajout de mindmap (mindmap de conception)
+    - debut implémentation de double liste chainée (DLinkedList)
+      en parralèle utilisation char** pour tester ce qu'on peut faire avec ncurses
+
+- 27/02/2018:
+    - discution des modules, définir les priorités
+    - Buffer:
+        - le choix d'un char** n'est clairement pas ce qui faut faire
+          mais utilisation direct, pas besoin d'implémentation
+        - une première idée est une liste chainée qu'on a toujours su faire.
+    - Le buffer basé sur double liste chainée avec cursor sera notre priorité
+
+- 20/02/2018:
+    - Une première compréhension de ncurses et du projet. Mais toujours pas d'idées claires.
+    - Première HELLO WORLD! avec ncurses !
+    - notion de buffer du projet.
+
+- 13/02/2018:
+    - Lecture ensemble du sujet. Il y a des idées, mais pas comment les faires.
+      Puisque qu'on ne connaissait pas <ncurses>.
+    - Chacun doit aller plonger dans le tuto howto.

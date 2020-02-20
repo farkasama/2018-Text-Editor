@@ -1,0 +1,16 @@
+### compilation
+- make
+
+### exécution
+
+
+### documents utiles
+- README            : contient les instructions et descriptions de docs
+- TextEditor.pdf    : mind map de conception
+- Journal.txt       : avancement du projet
+- About.txt         : information sur les auteurs
+
+Devrait contenir
+- DLinkedList.c/.h
+- editor_buffer.c/.h
+- fileio.c/.h
